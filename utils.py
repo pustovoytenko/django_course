@@ -9,3 +9,12 @@ def get_file_path(instance, filename):
     ext = filename.split('.')[-1]
     filename = "%s.%s" % (uuid.uuid4(), ext)
     return os.path.join(instance.__class__.__name__.lower(), filename)
+
+
+def custom_paginator(num_pages):
+    pag = []
+    if num_pages < 110:
+        for i in range(1, 11):
+            pag.append(i)
+    return pag
+
