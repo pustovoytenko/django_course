@@ -6,9 +6,10 @@ from publications.forms import PublicationForm
 
 from utils import custom_paginator
 
+
 def publications(request):
     form = PublicationForm()
-    num = custom_paginator(paginator.num_pages)
+    # num = custom_paginator(paginator.num_pages)
     if request.method == "POST":
         form = PublicationForm(request.POST, request.FILES)
         if form.is_valid():

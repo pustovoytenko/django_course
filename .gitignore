@@ -4,3 +4,4 @@ env
 media
 .idea
 *.log
+local_settings.py

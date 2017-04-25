@@ -11,6 +11,7 @@ urlpatterns = [
     url(r'^$', home_page, name="home"),
 
     url(r'^publications/$', publications, name="publications"),
+    url(r'accounts/', include('accounts.urls')),
 
     url(r'^redactor/', include('redactor.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
